@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "PawnBase.generated.h"
 
+class UCapsuleComponent;
+
 UCLASS()
 class TOONTANKS_API APawnBase : public APawn
 {
@@ -23,6 +25,13 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-private:	
-
+private:
+	UPROPERTY()
+	UCapsuleComponent* CapsuleComp = nullptr;
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh = nullptr;
+	UPROPERTY()	
+	UStaticMeshComponent* TurretMesh = nullptr;
+	UPROPERTY()	
+	USceneComponent* ProjectileSpawnPoint = nullptr;
 };
