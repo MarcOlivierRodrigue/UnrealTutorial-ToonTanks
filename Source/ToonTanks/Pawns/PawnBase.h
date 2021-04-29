@@ -26,12 +26,12 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta= (AllowPrivateAccess = "true"))
 	UCapsuleComponent* CapsuleComp = nullptr;
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta= (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* BaseMesh = nullptr;
-	UPROPERTY()	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta= (AllowPrivateAccess = "true"))	
 	UStaticMeshComponent* TurretMesh = nullptr;
-	UPROPERTY()	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta= (AllowPrivateAccess = "true"))	
 	USceneComponent* ProjectileSpawnPoint = nullptr;
 };
