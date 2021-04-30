@@ -33,4 +33,18 @@ private:
 
 		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta= (AllowPrivateAccess = "true"))
 		UCameraComponent* Camera = nullptr;
+
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta= (AllowPrivateAccess = "true"))
+		float MoveSpeed = 100.f;
+
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta= (AllowPrivateAccess = "true"))
+		float RotateSpeed = 100.f;
+
+		FVector MoveDirection;
+		FQuat RotationDirection;
+
+		void CalcMoveInput(float Value);
+		void CalcRotateInput(float Value);
+		void Move();
+		void Rotate();
 };
