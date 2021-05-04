@@ -34,7 +34,6 @@ void APawnBase::BeginPlay()
 void APawnBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -44,3 +43,17 @@ void APawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void APawnBase::RotateTurret (FVector LookAt)
+{
+
+}
+
+void APawnBase::Fire()
+{
+
+}
+
+void APawnBase::HandleDestruction()
+{
+	
+}
